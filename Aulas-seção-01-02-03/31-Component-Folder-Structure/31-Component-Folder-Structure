@@ -1,0 +1,8 @@
+# NOTES
+### Arquivo helloWorld.js-meta.xml
+- campo **isExposed** está sempre *false*, trocar para *true* para ficar disponível para um página
+### Outros arquivos/pastas
+- myComponent.css -> arquivo de estilo, 1 por componente
+- myComponent.svg -> arquivo de ícones gráficos vetoriais/escalares personalizados, 1 por componente
+- moreSharedCode.js -> arquivo para exportar métodos, constantes, dados estáticos para arquivo principal myComponent.js
+- \_\_teste__/myComponent.test.js -> pasta/arquivo para executar testes do componente
