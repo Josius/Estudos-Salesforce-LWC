@@ -4,5 +4,6 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "vlocity.sfdxUsername": "test-eeddbiiroikx@example.com"
+  "vlocity.sfdxUsername": "test-eeddbiiroikx@example.com",
+  "salesforcedx-vscode-core.show-cli-success-msg": false
 }
