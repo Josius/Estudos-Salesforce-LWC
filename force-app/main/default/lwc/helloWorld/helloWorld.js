@@ -7,4 +7,8 @@ export default class HelloWorld extends LightningElement {
 		name: "Jorge",
 		age: "25"
 	}
+	title = "Aura";
+	changeHandler(event){
+		this.title = event.target.value;
+	}
 }
