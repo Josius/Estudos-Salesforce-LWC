@@ -1,19 +1,14 @@
 import { LightningElement, track } from 'lwc';
 
 export default class HelloWorld extends LightningElement {
-	fullName = "Zero to Hero";
-	title = "Aura";
-	changeHandler(event){
-		this.title = event.target.value;
-	}
+	users = ["John", "Paul", "Mary", "Jane", "Mark", "David", "Gloria", "Linda", "Mike", "Cynthia"];
+	num1 = 10;
+	num2 = 20;
 
-	address={
-		city: "Melbourne",
-		country: 'Australia',
-		postalCode: 3008
+	get firstUser(){
+		return this.users[0].toUpperCase();
 	}
-	
-	trackHandler(event){
-		this.address = {...this. address, "city": event.target.value};
+	get multiply (){
+		return this.num1 * this.num2;
 	}
 }
