@@ -35,3 +35,16 @@ São métodos de retorno de chamadas (callbacks) acionados em uma fase específi
 - o *error argument* é um objeto de erro nativo do JS, e o *stack argument* é uma string
 - este método é específico do Lightning Web Components, ele não é do HTML
 ### errorCallback()
+
+# Render Method - aula 56
+- é um método que informa ao componente qual modelo deve ser carregado com base em alguma condição
+- como exemplo, usaremos alguns arquivos html que serão renderizados em um componente com base em uma condição
+- este método não é tecnicamente um Lifecycle Hook, ele é um *protected method* do *LightningElement* class 
+- chama-se esse método para atualizar a UI, antes ou depois de um *connectedCallback*
+- é raro chamar o método render em um componente. 
+- o mais comum é usar uma condicional para renderizar um modelo.
+- se temos if true/false para renderizar condicionalmente um componente, pq precisamos do método render?
+  - if true/false é recomendado para usar quando houver um modelo pequeno para ocultar e mostrar
+  - idealmente é sempre preferível dividir o componente em partes menores
+- Se temos um cenário onde temos a mesma lógica comercial, mas queremos renderizar um componente com mais de uma aparência, usamos o método render
+- e sempre que temos que projetar o mesmo componente mas não queremos criar um arquivo html gigantesco, acoplando toda a lógica em um único arquivo html, usarmos o método render 
