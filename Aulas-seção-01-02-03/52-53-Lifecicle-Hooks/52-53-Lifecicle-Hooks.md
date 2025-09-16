@@ -31,3 +31,7 @@ São métodos de retorno de chamadas (callbacks) acionados em uma fase específi
 - este método é específico do Lightning Web Components, ele não é do HTML
 ## Error Phase
 ### errorCallback()
+- é chamado quando um componente lança um erro
+- o *error argument* é um objeto de erro nativo do JS, e o *stack argument* é uma string
+- este método é específico do Lightning Web Components, ele não é do HTML
+### errorCallback()
