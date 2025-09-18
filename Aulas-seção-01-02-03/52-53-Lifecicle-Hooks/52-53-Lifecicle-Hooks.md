@@ -47,4 +47,4 @@ São métodos de retorno de chamadas (callbacks) acionados em uma fase específi
   - if true/false é recomendado para usar quando houver um modelo pequeno para ocultar e mostrar
   - idealmente é sempre preferível dividir o componente em partes menores
 - Se temos um cenário onde temos a mesma lógica comercial, mas queremos renderizar um componente com mais de uma aparência, usamos o método render
-- e sempre que temos que projetar o mesmo componente mas não queremos criar um arquivo html gigantesco, acoplando toda a lógica em um único arquivo html, usarmos o método render 
+- e sempre que temos que projetar o mesmo componente mas não queremos criar um arquivo html gigantesco, acoplando toda a lógica em um único arquivo html, usamos o método render 
