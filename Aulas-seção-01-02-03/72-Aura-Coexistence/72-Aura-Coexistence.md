@@ -11,4 +11,4 @@
 </lightning:card>
 </aura:component>
 ```
-- No exemplo completo, temos como tranferior os dados do Aura para o LWC usando **@api** e configurações no Aura; 
+- No exemplo completo, temos como tranferir os dados do Aura para o LWC usando **@api** e configurações no Aura; 
