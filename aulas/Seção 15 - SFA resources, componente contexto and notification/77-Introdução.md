@@ -1,6 +1,6 @@
 # Introdução - SFA resources, componente contexto and notification
 ### Tópicos abordados
-- Importar imagens do diretório *static* para o componente
+- Importar recursos estáticos para o componente
 - Usar bibliotecas JS de terceiros (JQuery, Moment.js, etc.)
 - Usar bibliotecas CSS de terceiros (bootstrap, material, etc.)
 - Acessar arquivos de ativos de conteúdo (asset files)
