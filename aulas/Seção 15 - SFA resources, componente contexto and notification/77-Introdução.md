@@ -3,7 +3,7 @@
 - Importar recursos estáticos para o componente
 - Usar bibliotecas JS de terceiros (JQuery, Moment.js, etc.)
 - Usar bibliotecas CSS de terceiros (bootstrap, material, etc.)
-- Acessar arquivos de ativos de conteúdo (asset files)
+- Acessar arquivos de ativos de conteúdo (asset files, asset library - arquivos contidos em Files)
 - Internacionalização, o qual pode-se alterar o código do país, moeda, localidade ou texto
 - Acessar as Labels
 - Verificação de permissão para acessar o conteúdo
