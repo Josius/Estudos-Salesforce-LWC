@@ -1,2 +1,0 @@
-# Notas sobre o curso Zero to Hero de LWC
-### [Complete Guide to learn Salesforce Lightning Web Components from Basics to Advance with real-time problems and projects](https://www.udemy.com/course/zero-to-hero-in-lightning-web-components/)
