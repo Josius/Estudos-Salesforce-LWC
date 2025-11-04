@@ -1,0 +1,3 @@
+# Fetch Record Id and Object Name
+- **@api recordId**: se um componente com a propriedade *recordId* é usado em uma Lightining record page, a página configura a propriedade para o Id do registro atual, ou seja, se houver um lwc com essa propriedade (*recordId*) na Lightining record page da visualização de registros do objeto caso, essa propriedade vai ser automaticamente preenchida com o valor do registro aberto na página.
+- **@api objectApiName**: se um componente com a propriedade *objectApiName* é usada no Lightning record page, a página configura a propriedade para a API name do objeto atual; segue a mesma lógica do exemplo acima, mas voltado para API Name
