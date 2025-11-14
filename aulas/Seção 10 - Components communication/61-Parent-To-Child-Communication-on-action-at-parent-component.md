@@ -29,3 +29,5 @@ changeHandler(event){
 ```html
 <lightning-progress-bar value={progressValue} size="large"></lightning-progress-bar>
 ``` 
+
+**OBS:** Exemplos dessa aula *p2cProgressComponent* e *p2cParentComponent* passam dados do componente pai para o filho após ocorrida uma **ação** no componente pai

@@ -30,3 +30,5 @@ carouselData=[
 	</template>
 </lightning-carousel>
 ```
+
+**OBS:** Exemplos dessa aula *p2cCarouselComponent* e *p2cParentComponent* passam dados complexos do componente pai para filho
