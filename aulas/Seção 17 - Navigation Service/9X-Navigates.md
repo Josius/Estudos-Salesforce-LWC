@@ -94,4 +94,16 @@ navigateToListView() {
 }
 ```
 
-
+# 96 Navigate To Files - Type: Object Page
+Mesma lógica
+```js
+navigateToFiles(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__objectPage',
+		attributes:{ 
+			objectApiName:'ContentDocument',
+			actionName:'home'
+		}
+	})
+}
+```
