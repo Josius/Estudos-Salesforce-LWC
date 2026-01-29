@@ -38,3 +38,17 @@ navigateToChatterPage(){
 	})
 }
 ```
+
+# 93 Navigate To New Record
+Semelhante as anteriores, criar um *lightning-card* no html, importar e chamar o *Navigate Service* usando um método, passando o tipo Objeto e os atributos indicando qual Objeto e qual ação deve ser tomada sobre esse objeto:
+```js
+navigateToNewRecord(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__objectPage',
+		attributes:{ 
+			objectApiName:'Contact',
+			actionName:'new'
+		}
+	})
+}
+```
