@@ -39,8 +39,8 @@ navigateToChatterPage(){
 }
 ```
 
-# 93 Navigate To New Record
-Semelhante as anteriores, criar um *lightning-card* no html, importar e chamar o *Navigate Service* usando um método, passando o tipo Objeto e os atributos indicando qual Objeto e qual ação deve ser tomada sobre esse objeto:
+# 93 Navigate To New Record - Type: Object Page
+Semelhante as anteriores, criar um *lightning-card* no html, importar e chamar o *Navigate Service* usando um método, passando o tipo Objeto e os atributos indicando qual Objeto e qual ação deve ser tomada sobre esse objeto, o do exemplo abrirá a tela de criação de registro:
 ```js
 navigateToNewRecord(){ 
 	this[NavigationMixin.Navigate]({ 
@@ -48,6 +48,30 @@ navigateToNewRecord(){
 		attributes:{ 
 			objectApiName:'Contact',
 			actionName:'new'
+		}
+	})
+}
+```
+
+# 94 Navigate To New Record With Default Values - Type: Object Page
+Semelhante abordagem, porém agora importamos o *encodeDefaultFieldValues* e passamos valores a serem preenchidos nos campos da tela de criação do registro (no exemplo os valores estão em *hardcode*), também passamos agora o campo *state* contendo os valores:
+```js
+import {encodeDefaultFieldValues} from 'lightning/pageReferenceUtils'
+...
+navigateToNewRecordWithDefault(){
+	const defaultValue = encodeDefaultFieldValues({ 
+		FirstName:'Zero',
+		LastName:'Hero',
+		LeadSource:'Other'
+	}) 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__objectPage',
+		attributes:{ 
+			objectApiName:'Contact',
+			actionName:'new'
+		},
+		state:{ 
+			defaultFieldValues: defaultValue
 		}
 	})
 }
