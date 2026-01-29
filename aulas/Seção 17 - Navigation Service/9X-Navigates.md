@@ -76,3 +76,22 @@ navigateToNewRecordWithDefault(){
 	})
 }
 ```
+
+# 95 Navigate To List View - Type: Object Page
+Seguindo a mesma ideia, o exemplo demonstra uma lista de contatos filtrada pelos registros mais recentes. Verificar se é possível usar outro filtro, como *All Contacts*
+```js
+navigateToListView() { 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__objectPage',
+		attributes:{ 
+			objectApiName:'Contact',
+			actionName:'list'
+		},
+		state:{ 
+			filterName:'Recent'
+		}
+	})
+}
+```
+
+
