@@ -107,3 +107,28 @@ navigateToFiles(){
 	})
 }
 ```
+
+# 97 Navigate To Record Page in View and Edit Mode - Type: Record Page
+Seguindo a mesma lógica, mas agora além de mudar o tipo, também precisamos passar o recordId, o tipo do objeto e a ação a ser tomada, editar ou visualizar:
+```js
+recordViewMode(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__recordPage',
+		attributes:{ 
+			recordId:'003N000001laB1ZIAU',
+			objectApiName:'Contact',
+			actionName:'view'
+		}
+	})
+}
+recordEditMode(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__recordPage',
+		attributes:{ 
+			recordId:'003N000001laB1ZIAU',
+			objectApiName:'Contact',
+			actionName:'edit'
+		}
+	})
+}
+```
