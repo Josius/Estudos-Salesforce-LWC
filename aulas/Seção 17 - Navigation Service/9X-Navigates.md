@@ -146,3 +146,19 @@ navigateToTab(){
 	})
 }
 ```
+
+# 99 Navigate To Record Relationship Page - Type: Record Relationship page
+Neste podemos navegar para a página de relacionamento de um objeto, por exemplo, para *Contact* de uma *Account*. Note que precisamos do *recorId* do *objectApiName* e também do objeto de relacionamento em *relationshipApiName*
+```js
+navigateToRelatedList(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__recordRelationshipPage',
+		attributes:{ 
+			recordId:'001N000001ytCVOIA2',
+			objectApiName:'Account',
+			relationshipApiName:'Contacts',
+			actionName:'view'
+		}
+	})
+}
+```
