@@ -162,3 +162,16 @@ navigateToRelatedList(){
 	})
 }
 ```
+
+# 100 Navigate To External Web Page - Type: Web Page
+Este aparenta ser o mais simples de se usar
+```js
+navigateToWeb(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:"standard__webPage",
+		attributes:{ 
+			url:"https://www.salesforcetroop.com"
+		}
+	})
+}
+```
