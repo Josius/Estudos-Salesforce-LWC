@@ -132,3 +132,17 @@ recordEditMode(){
 	})
 }
 ```
+
+# 98 Navigate To Tab - Type: Nav Item Page
+Temos que saber qual o *apiName* para adicionar em *attributes* logo, precisamos verificar o *apiName* na org, por exemplo, na url da org **https://orgdeteste-dev-ed.develop.lightning.force.com/lightning/n/Reusable_Component** veja que temos no fim da url *Reusable_Component*, este texto é o *apiName* que precisamos
+			
+```js
+navigateToTab(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__navItemPage',
+		attributes:{ 
+			apiName:'Styling_in_LWC'
+		}
+	})
+}
+```
