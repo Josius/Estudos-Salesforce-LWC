@@ -241,3 +241,24 @@ No controller configuramos a lógica do método:
     }
 })
 ```
+
+# 103 Navigate To Visualforce page - Type: Web Page
+Criamos uma VisualForce Page:
+- Setup -> Quick Find:Visualforce pages -> New -> Preencher 'Label' e 'Name' é preenchido automaticamente -> Marque a caixa 'Available for Lightning Experience, Experience Builder sites, and the mobile app' -> Save
+
+Novamente, semelhante abordagem:
+```js
+navigateToVFPage(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:"standard__webPage",
+		attributes:{ 
+			url:"/apex/navigateVfpage"
+		}
+	}).then(generatedUrl=>{ 
+		console.log(generatedUrl)
+		window.open(generatedUrl)
+	})
+}
+```
+- Em *attributes* temos *url:"/apex/navigateVfpage"* com o nome da VisualForce Page
+- Veja que precisamos usar uma *Promise* pois ele não redirecionará automaticamente para a VF Page, fazemos isso com *.then(generatedUrl=>* e *window.open(generatedUrl)*
