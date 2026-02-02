@@ -203,3 +203,41 @@ Em **this[NavigationMixin.Navigate]** temos:
 - em *attributes* temos *url:'/one/one.app#'+btoa(JSON.stringify(defination))*, o método *btoa* cria uma string codificada em base64 a partir da string binária
 
 E para receber os dados no outro LWC usamos um *@api recordId*
+
+# 102. Navigate To AURA Component - Type: Component
+Seguindo o mesmo padrão:
+```js
+navigateToAura(){ 
+	this[NavigationMixin.Navigate]({ 
+		type:"standard__component",
+		attributes:{ 
+			componentName:"c__AuraNavigation"
+		},
+		state:{ 
+			"c__id":"7876868687686"
+		}
+	})
+}
+```
+Mas no Aura precisamos fazer algumas modificações, como no arquivo .cmp para liberar a visualização do componente, atributos para receber dados, métodos para efetuar a transferência de dados, etc.:
+```html
+<aura:component implements="flexipage:availableForAllPageTypes, 
+lightning:isUrlAddressable" access="global">
+<aura:attribute name="id" type="String"/>
+<aura:handler name="init" value="{!this}" action="{!c.onload}"/>
+
+<div class="slds-card">
+	<div> Hey I am coming from lwc and my record id is {!v.id}</div>
+</div>
+</aura:component>	
+```
+No controller configuramos a lógica do método:
+```js
+({
+    onload : function(component) {
+        var myPageRef = component.get("v.pageReference")
+        var id = myPageRef.state.c__id
+        component.set("v.id", id)
+    }
+})
+```
