@@ -175,3 +175,31 @@ navigateToWeb(){
 	})
 }
 ```
+
+# 101. Navigate To LWC Page - Type: Web Page
+No exemplo, temos dois LWCs, um que direcionará para o outro. O que irá direcionar é semelhante aos anteriores, mas possuí alguma diferenças:
+```js
+navigateToLwc(){ 
+	var defination={ 
+		componentDef:'c:navigationLwcTarget',
+		attributes: { 
+			recordId:'768766686686'
+		}
+	}
+	this[NavigationMixin.Navigate]({ 
+		type:'standard__webPage',
+		attributes: { 
+			url:'/one/one.app#'+btoa(JSON.stringify(defination))
+		}
+	})
+}
+```
+Em **var defination** temos:
+- *componentDef:'c:navigationLwcTarget'* o qual é o nome do componente LWC que queremos ser redirecionados
+- em *attributes* temos *recordId:'768766686686'* que é a forma de enviar dados para o outro LWC
+
+Em **this[NavigationMixin.Navigate]** temos:
+- *type:'standard__webPage'* pois o LWC é uma pág web
+- em *attributes* temos *url:'/one/one.app#'+btoa(JSON.stringify(defination))*, o método *btoa* cria uma string codificada em base64 a partir da string binária
+
+E para receber os dados no outro LWC usamos um *@api recordId*
