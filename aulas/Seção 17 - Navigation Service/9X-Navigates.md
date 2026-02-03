@@ -262,3 +262,20 @@ navigateToVFPage(){
 ```
 - Em *attributes* temos *url:"/apex/navigateVfpage"* com o nome da VisualForce Page
 - Veja que precisamos usar uma *Promise* pois ele não redirecionará automaticamente para a VF Page, fazemos isso com *.then(generatedUrl=>* e *window.open(generatedUrl)*
+
+# 104 Fetch Current Page Reference  
+O objetivo é pegar o que estiver sendo passado na url, como um *recordId* ou outro dado relevante
+```js
+import { LightningElement, wire } from 'lwc';
+import {CurrentPageReference} from 'lightning/navigation'
+export default class CurrentReference extends LightningElement {
+    @wire(CurrentPageReference)
+    pageRef
+
+    get pageReference(){ 
+        return this.pageRef ? JSON.stringify(this.pageRef, null, 2) : '';
+    }
+}
+```
+- importamos o *CurrentPageReference* e o *wire*, e os usamos em conjunto para que todos os dados sejam armazenados na variável *pageRef*
+- usamos um get para retornar o conteúdo em *pageRef*, como é uma chamada assíncrona, usamos um ternário para o caso de não retornar nenhum dado
