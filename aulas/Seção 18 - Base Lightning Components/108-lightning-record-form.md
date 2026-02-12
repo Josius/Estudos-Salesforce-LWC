@@ -20,6 +20,7 @@ Observação: sempre que possível, para aumentar o desempenho, defina campos em
 - *view* - cria um formulário para exibir um registro que o usuário também pode editar. Os campos do registro possuem um botão de edição. O modo de visualização é o padrão quando o record-id é fornecido.
 - *readonly* - cria um formulário para exibir um registro que o usuário também pode editar.
 - **colunas** - use este atributo para exibir várias colunas no formulário.
+- Com **lightning-record-form** o que você pode fazer com os registros: create, edit, view, read-only mode, layout types e multi column layout
 
 ### Criar um registro usando lightning-record-form
 Importar referências a objetos e campos do Salesforce de **@salesforce/schema**
