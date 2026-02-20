@@ -25,10 +25,14 @@ userDetailHandler(response){
 
 Abaixo o código já pronto usando de boas práticas para passar a lista de **fields** ao **adapter**, onde importamos a referência do dado desejado, também demonstra o uso do **wire as function** e do **wire as property**:
 ```js
+import { LightningElement, wire } from 'lwc';
+import {getRecord} from 'lightning/uiRecordApi'
+import Id from '@salesforce/user/Id'
 import NAME_FIELD from '@salesforce/schema/User.Name'
 import EMAIL_FIELD from '@salesforce/schema/User.Email'
 const fields = [NAME_FIELD, EMAIL_FIELD]
 export default class WireDemoUserDetail extends LightningElement {
+    userId = Id
     userDetail
     @wire(getRecord, {recordId:'005Hp00000iFUrTIAW', fields})
     userDetailHandler({data, error}){
@@ -39,6 +43,7 @@ export default class WireDemoUserDetail extends LightningElement {
             console.error(error)
         }
     }
+
     @wire(getRecord, {recordId:'005Hp00000iFUrTIAW', fields})
     userDetailProperty
 }

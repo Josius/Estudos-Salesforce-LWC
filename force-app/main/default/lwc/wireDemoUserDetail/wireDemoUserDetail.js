@@ -5,9 +5,10 @@ import NAME_FIELD from '@salesforce/schema/User.Name'
 import EMAIL_FIELD from '@salesforce/schema/User.Email'
 const fields = [NAME_FIELD, EMAIL_FIELD]
 export default class WireDemoUserDetail extends LightningElement {
-    // userId = Id
+    userId = Id
+
     userDetail
-    @wire(getRecord, {recordId:'005Hp00000iFUrTIAW', fields})
+    @wire(getRecord, {recordId:'$userId', fields})
     userDetailHandler({data, error}){
         if(data){
             this.userDetail = data.fields
@@ -17,6 +18,6 @@ export default class WireDemoUserDetail extends LightningElement {
         }
     }
 
-    @wire(getRecord, {recordId:'005Hp00000iFUrTIAW', fields})
+    @wire(getRecord, {recordId:'$userId', fields})
     userDetailProperty
 }
