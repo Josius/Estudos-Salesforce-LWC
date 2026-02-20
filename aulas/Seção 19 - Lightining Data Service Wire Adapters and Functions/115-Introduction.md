@@ -3,5 +3,5 @@ Com o **Base Lightning Components** é possível obter dados do Salesforce, é u
 No LWC há o módulo **lightning/ui*Api**, o qual fornece o *wire adapters* e *functions JS*. Ele é construído sobre a *User Interface API*, a qual suporta objetos personalizados e padrões. Temos 4 módulos, são eles:
 - **lightning/uiObjectInfoApi** - usado para obter metadados de objetos e valores de picklist
 - **lightning/uiListApi(Beta)** - recuperar registros e metadados para uma *list view*
-- **lightning/ui** - um muito importante, usado para criar, recuperar, atualizar, excluir, atualizar o registro sem usar Apex
-- **lightning/ui** - usado para obter dados e metadados dos apps exibidos na interface de usuário do Salesforce
+- **lightning/uiRecordApi** - um muito importante, usado para criar, recuperar, atualizar, excluir, atualizar o registro sem usar Apex
+- **lightning/uiAppApi** - usado para obter dados e metadados dos apps exibidos na interface de usuário do Salesforce
